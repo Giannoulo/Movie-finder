@@ -1,0 +1,16 @@
+#header-row {
+  box-shadow: 0px 2px 4px $drop-shadow;
+  height: 70px;
+}
+
+#header-col {
+  text-align: center;
+  color: $button-color;
+  font-size: 30px;
+}
+
+#header-icon {
+  margin-right: 10px;
+  font-size: 28px;
+  filter: drop-shadow(1px 1px 2px rgb(182, 182, 182));
+}
