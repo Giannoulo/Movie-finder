@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/Movie-finder/static/css/main.2772e3d8.chunk.css",
-    "main.js": "/Movie-finder/static/js/main.c816340c.chunk.js",
-    "main.js.map": "/Movie-finder/static/js/main.c816340c.chunk.js.map",
-    "runtime-main.js": "/Movie-finder/static/js/runtime-main.3c0d8545.js",
-    "runtime-main.js.map": "/Movie-finder/static/js/runtime-main.3c0d8545.js.map",
+    "main.css": "/Movie-finder/static/css/main.32de2795.chunk.css",
+    "main.js": "/Movie-finder/static/js/main.e05a8b02.chunk.js",
+    "main.js.map": "/Movie-finder/static/js/main.e05a8b02.chunk.js.map",
+    "runtime-main.js": "/Movie-finder/static/js/runtime-main.8bbc3947.js",
+    "runtime-main.js.map": "/Movie-finder/static/js/runtime-main.8bbc3947.js.map",
     "static/css/2.818011ed.chunk.css": "/Movie-finder/static/css/2.818011ed.chunk.css",
-    "static/js/2.b70e4324.chunk.js": "/Movie-finder/static/js/2.b70e4324.chunk.js",
-    "static/js/2.b70e4324.chunk.js.map": "/Movie-finder/static/js/2.b70e4324.chunk.js.map",
-    "static/js/3.157c3398.chunk.js": "/Movie-finder/static/js/3.157c3398.chunk.js",
-    "static/js/3.157c3398.chunk.js.map": "/Movie-finder/static/js/3.157c3398.chunk.js.map",
+    "static/js/2.727d5540.chunk.js": "/Movie-finder/static/js/2.727d5540.chunk.js",
+    "static/js/2.727d5540.chunk.js.map": "/Movie-finder/static/js/2.727d5540.chunk.js.map",
+    "static/js/3.50037449.chunk.js": "/Movie-finder/static/js/3.50037449.chunk.js",
+    "static/js/3.50037449.chunk.js.map": "/Movie-finder/static/js/3.50037449.chunk.js.map",
     "index.html": "/Movie-finder/index.html",
     "static/css/2.818011ed.chunk.css.map": "/Movie-finder/static/css/2.818011ed.chunk.css.map",
-    "static/css/main.2772e3d8.chunk.css.map": "/Movie-finder/static/css/main.2772e3d8.chunk.css.map",
-    "static/js/2.b70e4324.chunk.js.LICENSE.txt": "/Movie-finder/static/js/2.b70e4324.chunk.js.LICENSE.txt"
+    "static/css/main.32de2795.chunk.css.map": "/Movie-finder/static/css/main.32de2795.chunk.css.map",
+    "static/js/2.727d5540.chunk.js.LICENSE.txt": "/Movie-finder/static/js/2.727d5540.chunk.js.LICENSE.txt",
+    "static/media/imdb_top_1000.e12a5ba6.csv": "/Movie-finder/static/media/imdb_top_1000.e12a5ba6.csv"
   },
   "entrypoints": [
-    "static/js/runtime-main.3c0d8545.js",
+    "static/js/runtime-main.8bbc3947.js",
     "static/css/2.818011ed.chunk.css",
-    "static/js/2.b70e4324.chunk.js",
-    "static/css/main.2772e3d8.chunk.css",
-    "static/js/main.c816340c.chunk.js"
+    "static/js/2.727d5540.chunk.js",
+    "static/css/main.32de2795.chunk.css",
+    "static/js/main.e05a8b02.chunk.js"
   ]
 }
