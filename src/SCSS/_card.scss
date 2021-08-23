@@ -1,9 +1,39 @@
+#play-button {
+  background-color: $button-color;
+  border-color: $button-color;
+}
+
+#card-title {
+  margin-bottom: 24px;
+}
 #card-col {
   margin-top: 8vh;
   text-align: center;
   box-shadow: 0px 2px 4px $drop-shadow;
   border-radius: 15px;
   padding: 20px;
-  height: 600px;
   max-width: 80%;
+  &:hover {
+    box-shadow: 0px 6px 10px $drop-shadow;
+  }
+}
+
+.movie-tile-img {
+  height: 268px;
+  width: 182px;
+}
+
+.movie-tile {
+  margin-bottom: 25px;
+  animation-name: fade-in;
+  animation-duration: 2s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
