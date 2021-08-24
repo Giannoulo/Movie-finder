@@ -1,4 +1,4 @@
-import { ADD_MOVIE_ID, POPULATE_MOVIE_LIST, PLAY_FINDER, CARD_NUMBER } from "./types";
+import { ADD_MOVIE_ID, POPULATE_MOVIE_LIST, PLAY_FINDER, CARD_NUMBER, DARK_MODE } from "./types";
 
 /*
  ** movieListActions.js
@@ -27,5 +27,11 @@ export const playFinderFunction = () => {
 export const increaseCardNumber = () => {
   return {
     type: CARD_NUMBER,
+  };
+};
+
+export const toggleDarkMode = () => {
+  return {
+    type: DARK_MODE,
   };
 };

@@ -3,6 +3,7 @@
 
 @import "./header";
 @import "./card";
+@import "./darkModeSlider";
 
 html,
 body,
@@ -13,4 +14,7 @@ body,
 #app-container {
   font-family: Roboto;
   height: 100%;
+  &.dark-body {
+    background-color: #627d98;
+  }
 }

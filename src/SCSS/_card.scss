@@ -1,12 +1,20 @@
 #play-button {
   background-color: $button-color;
   border-color: $button-color;
+  width: 90px;
 }
 
 #card-title {
   margin-bottom: 24px;
 }
+
+#card-row {
+  &.dark-body {
+    background-color: #627d98;
+  }
+}
 #card-col {
+  margin-bottom: 40px;
   margin-top: 8vh;
   text-align: center;
   box-shadow: 0px 2px 4px $drop-shadow;
@@ -16,11 +24,30 @@
   &:hover {
     box-shadow: 0px 6px 10px $drop-shadow;
   }
+  &.dark-card {
+    background-color: #829ab1;
+    color: white;
+    box-shadow: 0px 2px 4px #435466;
+    &:hover {
+      box-shadow: 0px 6px 10px #435466;
+    }
+  }
 }
 
 .movie-tile-img {
   height: 268px;
   width: 182px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 6px 10px $drop-shadow;
+  }
+  &.dark-tile-img {
+    &:hover {
+      box-shadow: 0px 6px 10px #435466;
+    }
+  }
 }
 
 .movie-tile {

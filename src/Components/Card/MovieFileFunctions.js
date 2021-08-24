@@ -7,7 +7,6 @@ export const read_csv = (props) => {
   Papa.parse(movielist, {
     download: true,
     complete: function (results) {
-      console.log("Parsing complete:", results.data);
       results.data.shift();
       props.populateMovieList(results.data);
     },

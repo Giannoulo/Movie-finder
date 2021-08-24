@@ -3,6 +3,7 @@ import {
   POPULATE_MOVIE_LIST,
   PLAY_FINDER,
   CARD_NUMBER,
+  DARK_MODE,
 } from "../../Redux/Actions/types";
 
 /*
@@ -15,6 +16,7 @@ const initialState = {
   pickedMovieList: ["Fwe", "Feggdeg", "Vieo", "Kiko"],
   playFinder: false,
   cardNumber: 0,
+  darkMode: false,
 };
 
 const movieListReducer = (state = initialState, action) => {
@@ -38,6 +40,11 @@ const movieListReducer = (state = initialState, action) => {
       return {
         ...state,
         cardNumber: state.cardNumber + 1,
+      };
+    case DARK_MODE:
+      return {
+        ...state,
+        darkMode: !state.darkMode,
       };
     default:
       return state;

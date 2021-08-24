@@ -32,27 +32,53 @@ const Card = (props) => {
   }, [props.cardNumber]); // TODO fix eslint warning
 
   return (
-    <div className="row justify-content-center" id="card-row">
-      <div className="col" id="card-col">
-        <h2 id="card-title">Choose your preferred movie!</h2>
-        <div className="row">
-          {props.playFinder ? (
-            movieTiles
-          ) : (
-            <div className="col">
-              <button
-                type="button"
-                className="btn btn-primary"
-                id="play-button"
-                onClick={() => renderMovieTiles()}
-              >
-                Play
-              </button>
+    <>
+      {props.darkMode ? (
+        <div className="row justify-content-center dark-body" id="card-row">
+          <div className="col dark-card" id="card-col">
+            <h2 id="card-title">Choose your favorite movie!</h2>
+            <div className="row">
+              {props.playFinder ? (
+                movieTiles
+              ) : (
+                <div className="col">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    id="play-button"
+                    onClick={() => renderMovieTiles()}
+                  >
+                    Play
+                  </button>
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
-      </div>
-    </div>
+      ) : (
+        <div className="row justify-content-center" id="card-row">
+          <div className="col" id="card-col">
+            <h2 id="card-title">Choose your favorite movie!</h2>
+            <div className="row">
+              {props.playFinder ? (
+                movieTiles
+              ) : (
+                <div className="col">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    id="play-button"
+                    onClick={() => renderMovieTiles()}
+                  >
+                    Play
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
@@ -61,6 +87,7 @@ const mapStateToProps = (state) => ({
   movieList: state.movies.movieList,
   playFinder: state.movies.playFinder,
   cardNumber: state.movies.cardNumber,
+  darkMode: state.movies.darkMode,
 });
 
 const mapDispatchToProps = { populateMovieList, playFinderFunction, increaseCardNumber };

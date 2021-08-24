@@ -7,3 +7,5 @@ export const ADD_MOVIE_ID = "ADD_MOVIE_ID";
 export const CARD_NUMBER = "CARD_NUMBER";
 
 export const PLAY_FINDER = "PLAY_FINDER";
+
+export const DARK_MODE = "DARK_MODE";
