@@ -39,6 +39,18 @@ const Card = (props) => {
             <div className="col dark-card" id="card-col">
               <h2 id="card-title">Choose your favorite Movie!</h2>
               <div className="row">{movieTiles}</div>
+              <div className="row justify-content-center">
+                <div className="col">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    id="play-button"
+                    onClick={() => renderMovieTiles()}
+                  >
+                    None
+                  </button>
+                </div>
+              </div>
             </div>
           ) : (
             <div className="col dark-card" id="card-col">
@@ -68,6 +80,18 @@ const Card = (props) => {
             <div className="col" id="card-col">
               <h2 id="card-title">Choose your favorite Movie!</h2>
               <div className="row">{movieTiles}</div>
+              <div className="row justify-content-center">
+                <div className="col">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    id="play-button"
+                    onClick={() => renderMovieTiles()}
+                  >
+                    None
+                  </button>
+                </div>
+              </div>
             </div>
           ) : (
             <div className="col" id="card-col">
