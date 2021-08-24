@@ -17,7 +17,6 @@ const MovieTile = (props) => {
             onMouseEnter={() => setshowDescription("movie-tile-description-shown")}
             onMouseLeave={() => setshowDescription("movie-tile-description-hidden")}
             onTouchStart={() => setshowDescription("movie-tile-description-shown")}
-            onTouchEnd={() => setshowDescription("movie-tile-description-hidden")}
           />
           <p className={showDescription}>{props.movie[4]}</p>
           <img
@@ -36,7 +35,6 @@ const MovieTile = (props) => {
             onMouseEnter={() => setshowDescription("movie-tile-description-shown")}
             onMouseLeave={() => setshowDescription("movie-tile-description-hidden")}
             onTouchStart={() => setshowDescription("movie-tile-description-shown")}
-            onTouchEnd={() => setshowDescription("movie-tile-description-hidden")}
           />
           <p className={showDescription}>{props.movie[4]}</p>
           <img
