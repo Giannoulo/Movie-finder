@@ -38,7 +38,7 @@ export const getMovieTiles = (movieList, increaseCardNumber) => {
   return (
     <>
       {newMovieList.map((newMovie) => (
-        <div className="col" key={newMovie[5]}>
+        <div className="col movie-tile-col" key={newMovie[5]}>
           <MovieTile movie={newMovie} increaseCardNumber={increaseCardNumber} />
         </div>
       ))}

@@ -35,12 +35,19 @@ const Card = (props) => {
     <>
       {props.darkMode ? (
         <div className="row justify-content-center dark-body" id="card-row">
-          <div className="col dark-card" id="card-col">
-            <h2 id="card-title">Choose your favorite movie!</h2>
-            <div className="row">
-              {props.playFinder ? (
-                movieTiles
-              ) : (
+          {props.playFinder ? (
+            <div className="col dark-card" id="card-col">
+              <h2 id="card-title">Choose your favorite Movie!</h2>
+              <div className="row">{movieTiles}</div>
+            </div>
+          ) : (
+            <div className="col dark-card" id="card-col">
+              <h5 id="card-title">
+                Movie Finder lets you discover new movies to watch by evaluating your favorite
+                movies. Simply pick your favorite movies from each selection and let A.I. do the
+                rest!
+              </h5>
+              <div className="row">
                 <div className="col">
                   <button
                     type="button"
@@ -51,18 +58,25 @@ const Card = (props) => {
                     Play
                   </button>
                 </div>
-              )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       ) : (
         <div className="row justify-content-center" id="card-row">
-          <div className="col" id="card-col">
-            <h2 id="card-title">Choose your favorite movie!</h2>
-            <div className="row">
-              {props.playFinder ? (
-                movieTiles
-              ) : (
+          {props.playFinder ? (
+            <div className="col" id="card-col">
+              <h2 id="card-title">Choose your favorite Movie!</h2>
+              <div className="row">{movieTiles}</div>
+            </div>
+          ) : (
+            <div className="col" id="card-col">
+              <h5 id="card-title">
+                Movie Finder lets you discover new movies to watch by evaluating your favorite
+                movies. Simply pick your favorite movies from each selection and let A.I. do the
+                rest!
+              </h5>
+              <div className="row">
                 <div className="col">
                   <button
                     type="button"
@@ -73,9 +87,9 @@ const Card = (props) => {
                     Play
                   </button>
                 </div>
-              )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       )}
     </>

@@ -33,34 +33,3 @@
     }
   }
 }
-
-.movie-tile-img {
-  height: 268px;
-  width: 182px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  &:hover {
-    box-shadow: 0px 6px 10px $drop-shadow;
-  }
-  &.dark-tile-img {
-    &:hover {
-      box-shadow: 0px 6px 10px #435466;
-    }
-  }
-}
-
-.movie-tile {
-  margin-bottom: 25px;
-  animation-name: fade-in;
-  animation-duration: 2s;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}

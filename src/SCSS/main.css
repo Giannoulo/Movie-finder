@@ -69,50 +69,6 @@
           box-shadow: 0px 6px 10px #435466;
 }
 
-.movie-tile-img {
-  height: 268px;
-  width: 182px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.movie-tile-img:hover {
-  -webkit-box-shadow: 0px 6px 10px #9e9e9e;
-          box-shadow: 0px 6px 10px #9e9e9e;
-}
-
-.movie-tile-img.dark-tile-img:hover {
-  -webkit-box-shadow: 0px 6px 10px #435466;
-          box-shadow: 0px 6px 10px #435466;
-}
-
-.movie-tile {
-  margin-bottom: 25px;
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -180,6 +136,94 @@ input:checked + .slider:before {
   font-size: 13px;
   line-height: 90%;
   margin-bottom: 4px;
+}
+
+.movie-tile-img {
+  height: 268px;
+  width: 182px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.movie-tile-img:hover {
+  -webkit-box-shadow: 0px 6px 10px #9e9e9e;
+          box-shadow: 0px 6px 10px #9e9e9e;
+}
+
+.movie-tile-img.dark-tile-img:hover {
+  -webkit-box-shadow: 0px 6px 10px #435466;
+          box-shadow: 0px 6px 10px #435466;
+}
+
+.movie-tile {
+  margin-bottom: 25px;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  position: relative;
+  max-width: 182px;
+}
+
+.movie-tile-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.movietile-info {
+  font-size: 30px;
+  opacity: 0.6;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  color: white;
+  z-index: 1;
+  -webkit-filter: drop-shadow(1px 1px 2px #0a0a0a);
+          filter: drop-shadow(1px 1px 2px #0a0a0a);
+}
+
+.movie-tile-description-hidden {
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.movie-tile-description-shown {
+  visibility: visible;
+  position: absolute;
+  background-color: #435466c4;
+  border-radius: 5px;
+  color: white;
 }
 
 html,

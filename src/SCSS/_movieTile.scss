@@ -1,0 +1,63 @@
+.movie-tile-img {
+  height: 268px;
+  width: 182px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 6px 10px $drop-shadow;
+  }
+  &.dark-tile-img {
+    &:hover {
+      box-shadow: 0px 6px 10px #435466;
+    }
+  }
+}
+
+.movie-tile {
+  margin-bottom: 25px;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  position: relative;
+  max-width: 182px;
+}
+.movie-tile-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.movietile-info {
+  font-size: 30px;
+  opacity: 0.6;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  color: white;
+  z-index: 1;
+  filter: drop-shadow(1px 1px 2px rgb(10, 10, 10));
+}
+
+.movie-tile-description-hidden {
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.movie-tile-description-shown {
+  visibility: visible;
+  position: absolute;
+  background-color: #435466c4;
+  border-radius: 5px;
+  color: white;
+}
