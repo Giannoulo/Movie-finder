@@ -1,2 +1,28 @@
-$drop-shadow: rgb(158, 158, 158);
 $button-color: rgb(190, 55, 202);
+$drop-shadow: #00a896;
+
+// Color pallette
+// Blue Sapphire:#05668D
+// Metallic Seaweed:#028090
+// Persian Green:#00A896
+// Mountain Meadow:#02C39A
+// Pale Spring Bud:#F0F3BD
+
+// Light mode colors
+$header-font-color-light: #028090;
+$background-color-header-light: #f7f8df;
+$drop-shadow-light: #00a896;
+$button-color-light: #028090;
+$button-color-hover-light: #05668d;
+$movietile-info-drop-shadow: #05668d;
+$movie-description-background-color: #00a897bd;
+$border-color-light: #02c39a;
+$font-color-light: #05668d;
+
+// Dark mode colors
+$font-color-dark: #f0f3bd;
+$background-color-header-dark: #05668d;
+$header-font-color-dark: #f0f3bd;
+$drop-shadow-dark: #f0f3bd;
+$background-color-body-dark: #028090;
+$background-color-card-dark: #05668d;

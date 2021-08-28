@@ -1,35 +1,39 @@
 #play-button {
-  background-color: $button-color;
-  border-color: $button-color;
+  background-color: $button-color-light;
+  border-color: $border-color-light;
   width: 90px;
+  color: $font-color-dark;
+  font-weight: 600;
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    background-color: $button-color-hover-light;
+  }
 }
 
 #card-title {
   margin-bottom: 24px;
 }
 
-#card-row {
-  &.dark-body {
-    background-color: #627d98;
-  }
-}
 #card-col {
   margin-bottom: 40px;
   margin-top: 8vh;
   text-align: center;
-  box-shadow: 0px 2px 4px $drop-shadow;
+  box-shadow: 0px 2px 4px $drop-shadow-light;
   border-radius: 15px;
   padding: 20px;
   max-width: 80%;
+  color: $font-color-light;
   &:hover {
-    box-shadow: 0px 6px 10px $drop-shadow;
+    box-shadow: 0px 6px 10px $drop-shadow-light;
   }
   &.dark-card {
-    background-color: #829ab1;
+    background-color: $background-color-card-dark;
     color: white;
-    box-shadow: 0px 2px 4px #435466;
+    box-shadow: 0px 2px 4px $drop-shadow-dark;
     &:hover {
-      box-shadow: 0px 6px 10px #435466;
+      box-shadow: 0px 6px 10px $drop-shadow-dark;
     }
   }
 }

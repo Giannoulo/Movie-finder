@@ -1,33 +1,26 @@
 #header-row {
-  box-shadow: 0px 2px 4px $drop-shadow;
+  box-shadow: 0px 2px 4px $drop-shadow-light;
   height: 70px;
-  background: rgb(147, 95, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(147, 95, 180, 1) 0%,
-    rgba(217, 210, 227, 1) 46%,
-    rgba(255, 255, 255, 1) 94%
-  );
+  background-color: $background-color-header-light;
+  color: $font-color-light;
   &.dark {
-    background: rgb(36, 59, 83);
-    background: linear-gradient(
-      90deg,
-      rgba(36, 59, 83, 1) 9%,
-      rgba(61, 61, 121, 1) 28%,
-      rgba(159, 179, 200, 1) 89%
-    );
-    color: white;
+    background-color: $background-color-header-dark;
+    color: $font-color-dark;
+    // box-shadow: 0px 2px 4px $drop-shadow-dark;
   }
 }
 
 #header-col {
   text-align: center;
-  color: $button-color;
+  color: $header-font-color-light;
   font-size: 30px;
+  &.dark {
+    background-color: $background-color-header-dark;
+    color: $font-color-dark;
+  }
 }
 
 #header-icon {
   margin-right: 10px;
   font-size: 28px;
-  filter: drop-shadow(1px 1px 2px rgb(182, 182, 182));
 }

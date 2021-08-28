@@ -5,11 +5,11 @@
   margin-bottom: 10px;
   cursor: pointer;
   &:hover {
-    box-shadow: 0px 6px 10px $drop-shadow;
+    box-shadow: 0px 6px 10px $drop-shadow-light;
   }
   &.dark-tile-img {
     &:hover {
-      box-shadow: 0px 6px 10px #435466;
+      box-shadow: 0px 6px 10px $drop-shadow-dark;
     }
   }
 }
@@ -45,7 +45,7 @@
   right: 4px;
   color: white;
   z-index: 1;
-  filter: drop-shadow(1px 1px 2px rgb(10, 10, 10));
+  filter: drop-shadow(1px 1px 2px $movietile-info-drop-shadow);
 }
 
 .movie-tile-description-hidden {
@@ -57,7 +57,7 @@
 .movie-tile-description-shown {
   visibility: visible;
   position: absolute;
-  background-color: #435466c4;
+  background-color: $movie-description-background-color;
   border-radius: 5px;
   color: white;
 }

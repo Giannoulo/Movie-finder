@@ -16,6 +16,6 @@ body,
   font-family: Roboto;
   height: 100%;
   &.dark-body {
-    background-color: #627d98;
+    background-color: $background-color-body-dark;
   }
 }
