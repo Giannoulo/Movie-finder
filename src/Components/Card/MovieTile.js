@@ -25,7 +25,7 @@ const MovieTile = (props) => {
             alt={props.movie[1]}
             className="movie-tile-img dark-tile-img"
           />
-          <div>{props.movie[1]}</div>
+          <div className="movie-tile-title">{props.movie[1]}</div>
         </div>
       ) : (
         <div className="movie-tile">
@@ -43,7 +43,7 @@ const MovieTile = (props) => {
             alt={props.movie[1]}
             className="movie-tile-img"
           />
-          <div>{props.movie[1]}</div>
+          <div className="movie-tile-title">{props.movie[1]}</div>
         </div>
       )}
     </>

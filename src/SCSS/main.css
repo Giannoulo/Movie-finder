@@ -1,14 +1,20 @@
 #header-row {
+  font-weight: 600;
   -webkit-box-shadow: 0px 2px 4px #00a896;
           box-shadow: 0px 2px 4px #00a896;
-  height: 70px;
+  border-bottom: 1px solid #00a896;
+  height: 100px;
   background-color: #f7f8df;
   color: #05668d;
+  position: relative;
 }
 
 #header-row.dark {
   background-color: #05668d;
   color: #f0f3bd;
+  -webkit-box-shadow: 0px 2px 4px #f0f3bd;
+          box-shadow: 0px 2px 4px #f0f3bd;
+  border-bottom: 1px solid #f0f3bd;
 }
 
 #header-col {
@@ -64,21 +70,11 @@
   color: #05668d;
 }
 
-#card-col:hover {
-  -webkit-box-shadow: 0px 6px 10px #00a896;
-          box-shadow: 0px 6px 10px #00a896;
-}
-
 #card-col.dark-card {
   background-color: #05668d;
   color: white;
   -webkit-box-shadow: 0px 2px 4px #f0f3bd;
           box-shadow: 0px 2px 4px #f0f3bd;
-}
-
-#card-col.dark-card:hover {
-  -webkit-box-shadow: 0px 6px 10px #f0f3bd;
-          box-shadow: 0px 6px 10px #f0f3bd;
 }
 
 /* The switch - the box around the slider */
@@ -236,6 +232,11 @@ input:checked + .slider:before {
   background-color: #00a897bd;
   border-radius: 5px;
   color: white;
+}
+
+.movie-tile-title {
+  min-height: 75px;
+  font-weight: 600;
 }
 
 html,
