@@ -11,6 +11,11 @@
     background-color: $button-color-hover-light;
   }
 }
+#card-row {
+  &.dark-body {
+    background-color: $background-color-body-dark;
+  }
+}
 
 #card-title {
   margin-bottom: 24px;
