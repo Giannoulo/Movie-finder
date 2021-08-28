@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Movie-finder/static/css/main.9c1e5d4c.chunk.css",
-    "main.js": "/Movie-finder/static/js/main.b2d924b9.chunk.js",
-    "main.js.map": "/Movie-finder/static/js/main.b2d924b9.chunk.js.map",
+    "main.css": "/Movie-finder/static/css/main.87dd1d6b.chunk.css",
+    "main.js": "/Movie-finder/static/js/main.50350d11.chunk.js",
+    "main.js.map": "/Movie-finder/static/js/main.50350d11.chunk.js.map",
     "runtime-main.js": "/Movie-finder/static/js/runtime-main.8bbc3947.js",
     "runtime-main.js.map": "/Movie-finder/static/js/runtime-main.8bbc3947.js.map",
     "static/css/2.818011ed.chunk.css": "/Movie-finder/static/css/2.818011ed.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.50037449.chunk.js.map": "/Movie-finder/static/js/3.50037449.chunk.js.map",
     "index.html": "/Movie-finder/index.html",
     "static/css/2.818011ed.chunk.css.map": "/Movie-finder/static/css/2.818011ed.chunk.css.map",
-    "static/css/main.9c1e5d4c.chunk.css.map": "/Movie-finder/static/css/main.9c1e5d4c.chunk.css.map",
+    "static/css/main.87dd1d6b.chunk.css.map": "/Movie-finder/static/css/main.87dd1d6b.chunk.css.map",
     "static/js/2.85e9d497.chunk.js.LICENSE.txt": "/Movie-finder/static/js/2.85e9d497.chunk.js.LICENSE.txt",
     "static/media/imdb_top_1000.e12a5ba6.csv": "/Movie-finder/static/media/imdb_top_1000.e12a5ba6.csv"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.8bbc3947.js",
     "static/css/2.818011ed.chunk.css",
     "static/js/2.85e9d497.chunk.js",
-    "static/css/main.9c1e5d4c.chunk.css",
-    "static/js/main.b2d924b9.chunk.js"
+    "static/css/main.87dd1d6b.chunk.css",
+    "static/js/main.50350d11.chunk.js"
   ]
 }
