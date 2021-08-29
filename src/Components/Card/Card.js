@@ -37,7 +37,7 @@ const Card = (props) => {
         <div className="row justify-content-center dark-body" id="card-row">
           {props.playFinder ? (
             <div className="col dark-card" id="card-col">
-              <h2 id="card-title">Choose your favorite Movie!</h2>
+              <h2 id="card-title">Choose your favorite movie!</h2>
               <div className="row">{movieTiles}</div>
               <div className="row justify-content-center">
                 <div className="col">
@@ -54,11 +54,11 @@ const Card = (props) => {
             </div>
           ) : (
             <div className="col dark-card" id="card-col">
-              <h5 id="card-title">
+              <p id="card-title-landing">
                 Movie Finder lets you discover new movies to watch by evaluating your favorite
                 movies. Simply pick your favorite movies from each selection and let A.I. do the
                 rest!
-              </h5>
+              </p>
               <div className="row">
                 <div className="col">
                   <button
@@ -78,7 +78,7 @@ const Card = (props) => {
         <div className="row justify-content-center" id="card-row">
           {props.playFinder ? (
             <div className="col" id="card-col">
-              <h2 id="card-title">Choose your favorite Movie!</h2>
+              <h2 id="card-title">Choose your favorite movie!</h2>
               <div className="row">{movieTiles}</div>
               <div className="row justify-content-center">
                 <div className="col">
@@ -95,11 +95,11 @@ const Card = (props) => {
             </div>
           ) : (
             <div className="col" id="card-col">
-              <h5 id="card-title">
+              <p id="card-title-landing">
                 Movie Finder lets you discover new movies to watch by evaluating your favorite
                 movies. Simply pick your favorite movies from each selection and let A.I. do the
                 rest!
-              </h5>
+              </p>
               <div className="row">
                 <div className="col">
                   <button

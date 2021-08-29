@@ -18,7 +18,14 @@
 }
 
 #card-title {
-  margin-bottom: 24px;
+  max-width: 80%;
+  margin: auto;
+}
+
+#card-title-landing {
+  font-size: 22px;
+  max-width: 80%;
+  margin: auto;
 }
 
 #card-col {
@@ -34,5 +41,8 @@
     background-color: $background-color-card-dark;
     color: white;
     box-shadow: 0px 2px 4px $drop-shadow-dark;
+  }
+  & > div:first-of-type {
+    margin-top: 24px;
   }
 }

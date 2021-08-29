@@ -172,7 +172,14 @@
 }
 
 #card-title {
-  margin-bottom: 24px;
+  max-width: 80%;
+  margin: auto;
+}
+
+#card-title-landing {
+  font-size: 22px;
+  max-width: 80%;
+  margin: auto;
 }
 
 #card-col {
@@ -192,6 +199,10 @@
   color: white;
   -webkit-box-shadow: 0px 2px 4px #f0f3bd;
           box-shadow: 0px 2px 4px #f0f3bd;
+}
+
+#card-col > div:first-of-type {
+  margin-top: 24px;
 }
 
 /* The switch - the box around the slider */
