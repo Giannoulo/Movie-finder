@@ -1,16 +1,20 @@
 #header-row {
+  background-image: url(./HeaderLight.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-weight: 600;
   -webkit-box-shadow: 0px 2px 4px #00a896;
           box-shadow: 0px 2px 4px #00a896;
   border-bottom: 1px solid #00a896;
   height: 100px;
-  background-color: #f7f8df;
   color: #05668d;
   position: relative;
 }
 
 #header-row.dark {
-  background-color: #05668d;
+  background-image: url(./HeaderDark.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #f0f3bd;
   -webkit-box-shadow: 0px 2px 4px #f0f3bd;
           box-shadow: 0px 2px 4px #f0f3bd;
@@ -26,7 +30,6 @@
 }
 
 #header-col.dark {
-  background-color: #05668d;
   color: #f0f3bd;
 }
 

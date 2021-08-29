@@ -1,13 +1,17 @@
 #header-row {
+  background-image: url(./HeaderLight.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-weight: 600;
   box-shadow: 0px 2px 4px $drop-shadow-light;
   border-bottom: 1px solid $drop-shadow-light;
   height: 100px;
-  background-color: $background-color-header-light;
   color: $font-color-light;
   position: relative;
   &.dark {
-    background-color: $background-color-header-dark;
+    background-image: url(./HeaderDark.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: $font-color-dark;
     box-shadow: 0px 2px 4px $drop-shadow-dark;
     border-bottom: 1px solid $drop-shadow-dark;
@@ -21,7 +25,6 @@
   font-size: 30px;
   font-weight: 500;
   &.dark {
-    background-color: $background-color-header-dark;
     color: $font-color-dark;
   }
   & > span {
