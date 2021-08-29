@@ -9,7 +9,7 @@ function Header(props) {
       {props.darkMode ? (
         <div className="row align-items-center dark" id="header-row">
           <div className="col-9 dark" id="header-col">
-            <FontAwesomeIcon icon={faFilm} id="header-icon" />
+            <FontAwesomeIcon icon={faFilm} id="header-icon" className="dark" />
             Movie Finder
           </div>
           <div className="col-3">

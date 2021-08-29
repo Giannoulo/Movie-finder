@@ -15,9 +15,11 @@
 }
 
 #header-col {
+  font-family: "Pacifico", cursive;
   text-align: center;
   color: $header-font-color-light;
   font-size: 30px;
+  font-weight: 500;
   &.dark {
     background-color: $background-color-header-dark;
     color: $font-color-dark;
@@ -26,5 +28,51 @@
 
 #header-icon {
   margin-right: 10px;
-  font-size: 28px;
+  font-size: 40px;
+  animation-name: header-icon-spin-light;
+  animation-duration: 6s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  &.dark {
+    animation-name: header-icon-spin-dark;
+    animation-duration: 6s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+}
+
+@keyframes header-icon-spin-light {
+  0% {
+    transform: rotate(0deg);
+    filter: drop-shadow(1px 1px 1px $drop-shadow-light);
+  }
+  5% {
+    filter: drop-shadow(6px 6px 2px $drop-shadow-light);
+  }
+  10% {
+    transform: rotate(180deg);
+    filter: drop-shadow(1px 1px 1px $drop-shadow-light);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes header-icon-spin-dark {
+  0% {
+    transform: rotate(0deg);
+    filter: drop-shadow(1px 1px 1px $drop-shadow-dark);
+  }
+  5% {
+    filter: drop-shadow(6px 6px 2px $drop-shadow-dark);
+  }
+  10% {
+    transform: rotate(180deg);
+    filter: drop-shadow(1px 1px 1px $drop-shadow-dark);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
