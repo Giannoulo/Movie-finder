@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Movie-finder/static/css/main.cf0aecd2.chunk.css",
+    "main.css": "/Movie-finder/static/css/main.9c9f67a0.chunk.css",
     "main.js": "/Movie-finder/static/js/main.6b175f58.chunk.js",
     "main.js.map": "/Movie-finder/static/js/main.6b175f58.chunk.js.map",
     "runtime-main.js": "/Movie-finder/static/js/runtime-main.6c5e365e.js",
@@ -12,15 +12,16 @@
     "static/js/3.a5d9331e.chunk.js.map": "/Movie-finder/static/js/3.a5d9331e.chunk.js.map",
     "index.html": "/Movie-finder/index.html",
     "static/css/2.818011ed.chunk.css.map": "/Movie-finder/static/css/2.818011ed.chunk.css.map",
-    "static/css/main.cf0aecd2.chunk.css.map": "/Movie-finder/static/css/main.cf0aecd2.chunk.css.map",
+    "static/css/main.9c9f67a0.chunk.css.map": "/Movie-finder/static/css/main.9c9f67a0.chunk.css.map",
     "static/js/2.e52b7b34.chunk.js.LICENSE.txt": "/Movie-finder/static/js/2.e52b7b34.chunk.js.LICENSE.txt",
+    "static/media/main.css": "/Movie-finder/static/media/HeaderLight.9a14d37d.svg",
     "static/media/imdb_top_1000.e12a5ba6.csv": "/Movie-finder/static/media/imdb_top_1000.e12a5ba6.csv"
   },
   "entrypoints": [
     "static/js/runtime-main.6c5e365e.js",
     "static/css/2.818011ed.chunk.css",
     "static/js/2.e52b7b34.chunk.js",
-    "static/css/main.cf0aecd2.chunk.css",
+    "static/css/main.9c9f67a0.chunk.css",
     "static/js/main.6b175f58.chunk.js"
   ]
 }
