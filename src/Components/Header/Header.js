@@ -15,7 +15,11 @@ function Header(props) {
           <div className="col-3">
             <div id="dark-mode-title">Dark Mode</div>
             <label className="switch">
-              <input type="checkbox" onClick={() => props.toggleDarkMode()} />
+              <input
+                type="checkbox"
+                name="dark-mode-checkbox"
+                onClick={() => props.toggleDarkMode()}
+              />
               <span className="slider round"></span>
             </label>
           </div>
@@ -29,7 +33,11 @@ function Header(props) {
           <div className="col-3">
             <div id="dark-mode-title">Dark Mode</div>
             <label className="switch">
-              <input type="checkbox" onClick={() => props.toggleDarkMode()} />
+              <input
+                type="checkbox"
+                name="dark-mode-checkbox"
+                onClick={() => props.toggleDarkMode()}
+              />
               <span className="slider round"></span>
             </label>
           </div>
