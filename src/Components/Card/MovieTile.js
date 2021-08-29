@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { increaseCardNumber, addPickedMovie } from "../../Redux/Actions/movieListActions";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 const MovieTile = (props) => {
   const [showDescription, setshowDescription] = useState("movie-tile-description-hidden");
-
   return (
     <>
       {props.darkMode ? (
@@ -20,7 +20,14 @@ const MovieTile = (props) => {
           />
           <p className={showDescription}>{props.movie[4]}</p>
           <img
-            onClick={() => props.increaseCardNumber()}
+            onClick={
+              props.recommendation
+                ? undefined
+                : () => {
+                    props.increaseCardNumber();
+                    props.addPickedMovie(props.movie);
+                  }
+            }
             src={props.movie[0]}
             alt={props.movie[1]}
             className="movie-tile-img dark-tile-img"
@@ -38,7 +45,14 @@ const MovieTile = (props) => {
           />
           <p className={showDescription}>{props.movie[4]}</p>
           <img
-            onClick={() => props.increaseCardNumber()}
+            onClick={
+              props.recommendation
+                ? undefined
+                : () => {
+                    props.increaseCardNumber();
+                    props.addPickedMovie(props.movie);
+                  }
+            }
             src={props.movie[0]}
             alt={props.movie[1]}
             className="movie-tile-img"
@@ -49,6 +63,8 @@ const MovieTile = (props) => {
     </>
   );
 };
-const mapStateToProps = (state) => ({ darkMode: state.movies.darkMode });
+const mapStateToProps = (state) => ({ darkMode: state.darkMode });
 
-export default connect(mapStateToProps)(MovieTile);
+const mapDispatchToProps = { increaseCardNumber, addPickedMovie };
+
+export default connect(mapStateToProps, mapDispatchToProps)(MovieTile);

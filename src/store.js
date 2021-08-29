@@ -1,22 +1,19 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
-import rootReducer from "./Redux/Reducers";
+import movieListReducer from "./Redux/Reducers/movieListReducer";
 
 /*
-** Store.js
-** Store holds the whole state tree of your application. 
-*/
+ ** Store.js
+ ** Store holds the whole state tree of your application.
+ */
 
 export const middleware = [thunk];
 
 let store;
 
-if (
-  window.__REDUX_DEVTOOLS_EXTENSION__ &&
-  window.__REDUX_DEVTOOLS_EXTENSION__()
-) {
+if (window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) {
   store = createStore(
-    rootReducer,
+    movieListReducer,
     // compose is used when multiple enhancers are present
     compose(
       applyMiddleware(...middleware),
@@ -24,6 +21,6 @@ if (
     )
   );
 } else {
-  store = createStore(rootReducer, compose(applyMiddleware(...middleware)));
+  store = createStore(movieListReducer, compose(applyMiddleware(...middleware)));
 }
 export default store;

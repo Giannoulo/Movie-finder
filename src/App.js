@@ -19,6 +19,6 @@ function App(props) {
     </>
   );
 }
-const mapStateToProps = (state) => ({ darkMode: state.movies.darkMode });
+const mapStateToProps = (state) => ({ darkMode: state.darkMode });
 
 export default connect(mapStateToProps)(App);

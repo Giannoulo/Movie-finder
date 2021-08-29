@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 import {
   populateMovieList,
   playFinderFunction,
-  increaseCardNumber,
+  restartFinderFunction,
 } from "../../Redux/Actions/movieListActions";
-import { read_csv, getMovieTiles } from "./MovieFileFunctions";
+import { read_csv, getMovieTiles, recommendMovies } from "./MovieFileFunctions";
 
 const Card = (props) => {
   // Load the movie list on Redux on first render
@@ -21,13 +21,20 @@ const Card = (props) => {
     if (!props.playFinder) {
       props.playFinderFunction();
     }
-    setmovieTiles(getMovieTiles(props.movieList, props.increaseCardNumber));
+    setmovieTiles(getMovieTiles(props.movieList));
+  };
+
+  // Show Recommended movies after 10 picks
+  const showRecommendationMovies = () => {
+    setmovieTiles(recommendMovies(props.pickedMovieList, props.movieList));
   };
 
   // Re Render MovieTiles
   useEffect(() => {
-    if (props.cardNumber > 0) {
+    if (props.cardNumber > 0 && props.cardNumber < 10) {
       renderMovieTiles();
+    } else if (props.cardNumber === 10) {
+      showRecommendationMovies();
     }
   }, [props.cardNumber]); // TODO fix eslint warning
 
@@ -37,18 +44,35 @@ const Card = (props) => {
         <div className="row justify-content-center dark-body" id="card-row">
           {props.playFinder ? (
             <div className="col dark-card" id="card-col">
-              <h2 id="card-title">Choose your favorite movie!</h2>
+              {props.cardNumber === 10 ? (
+                <h2 id="card-title">You should check out these movies!</h2>
+              ) : (
+                <h2 id="card-title">Choose your favorite movies!</h2>
+              )}
               <div className="row">{movieTiles}</div>
               <div className="row justify-content-center">
                 <div className="col">
-                  <button
-                    type="button"
-                    className="btn btn-primary"
-                    id="play-button"
-                    onClick={() => renderMovieTiles()}
-                  >
-                    None
-                  </button>
+                  {props.cardNumber === 10 ? (
+                    <button
+                      type="button"
+                      className="btn btn-primary complete"
+                      id="play-button"
+                      onClick={() => {
+                        props.restartFinderFunction();
+                      }}
+                    >
+                      Start Again!
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      id="play-button"
+                      onClick={() => renderMovieTiles()}
+                    >
+                      None
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
@@ -78,18 +102,35 @@ const Card = (props) => {
         <div className="row justify-content-center" id="card-row">
           {props.playFinder ? (
             <div className="col" id="card-col">
-              <h2 id="card-title">Choose your favorite movie!</h2>
+              {props.cardNumber === 10 ? (
+                <h2 id="card-title">You should check out these movies!</h2>
+              ) : (
+                <h2 id="card-title">Choose your favorite movies!</h2>
+              )}
               <div className="row">{movieTiles}</div>
               <div className="row justify-content-center">
                 <div className="col">
-                  <button
-                    type="button"
-                    className="btn btn-primary"
-                    id="play-button"
-                    onClick={() => renderMovieTiles()}
-                  >
-                    None
-                  </button>
+                  {props.cardNumber === 10 ? (
+                    <button
+                      type="button"
+                      className="btn btn-primary complete"
+                      id="play-button"
+                      onClick={() => {
+                        props.restartFinderFunction();
+                      }}
+                    >
+                      Start Again!
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      id="play-button"
+                      onClick={() => renderMovieTiles()}
+                    >
+                      None
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
@@ -121,13 +162,13 @@ const Card = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-  pickedMovieList: state.movies.pickedMovieList,
-  movieList: state.movies.movieList,
-  playFinder: state.movies.playFinder,
-  cardNumber: state.movies.cardNumber,
-  darkMode: state.movies.darkMode,
+  pickedMovieList: state.pickedMovieList,
+  movieList: state.movieList,
+  playFinder: state.playFinder,
+  cardNumber: state.cardNumber,
+  darkMode: state.darkMode,
 });
 
-const mapDispatchToProps = { populateMovieList, playFinderFunction, increaseCardNumber };
+const mapDispatchToProps = { populateMovieList, playFinderFunction, restartFinderFunction };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);

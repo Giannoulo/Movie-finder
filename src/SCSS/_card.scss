@@ -10,6 +10,9 @@
   &:hover {
     background-color: $button-color-hover-light;
   }
+  &.complete {
+    width: 120px;
+  }
 }
 #card-row {
   &.dark-body {

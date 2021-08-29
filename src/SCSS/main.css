@@ -30,6 +30,10 @@
   color: #f0f3bd;
 }
 
+#header-col > span {
+  cursor: pointer;
+}
+
 #header-icon {
   margin-right: 10px;
   font-size: 40px;
@@ -165,6 +169,10 @@
 
 #play-button:hover {
   background-color: #05668d;
+}
+
+#play-button.complete {
+  width: 120px;
 }
 
 #card-row.dark-body {

@@ -1,19 +1,20 @@
 import {
-  ADD_MOVIE_ID,
+  ADD_PICKED_MOVIE,
   POPULATE_MOVIE_LIST,
   PLAY_FINDER,
   CARD_NUMBER,
   DARK_MODE,
+  RESTART_FINDER,
 } from "../../Redux/Actions/types";
 
 /*
- ** loginReducer.js
- ** Returns login state based on actions provided
+ ** movieReducer.js
+ ** Returns state based on actions provided
  */
 
 const initialState = {
   movieList: null,
-  pickedMovieList: ["Fwe", "Feggdeg", "Vieo", "Kiko"],
+  pickedMovieList: [],
   playFinder: false,
   cardNumber: 0,
   darkMode: false,
@@ -21,10 +22,10 @@ const initialState = {
 
 const movieListReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_MOVIE_ID:
+    case ADD_PICKED_MOVIE:
       return {
         ...state,
-        pickedMovieList: action.payload,
+        pickedMovieList: [...state.pickedMovieList, action.payload],
       };
     case POPULATE_MOVIE_LIST:
       return {
@@ -35,6 +36,13 @@ const movieListReducer = (state = initialState, action) => {
       return {
         ...state,
         playFinder: true,
+      };
+    case RESTART_FINDER:
+      return {
+        ...state,
+        playFinder: false,
+        pickedMovieList: [],
+        cardNumber: 0,
       };
     case CARD_NUMBER:
       return {

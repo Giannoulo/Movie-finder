@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilm } from "@fortawesome/free-solid-svg-icons";
 import { connect } from "react-redux";
-import { toggleDarkMode } from "../../Redux/Actions/movieListActions";
+import { toggleDarkMode, restartFinderFunction } from "../../Redux/Actions/movieListActions";
 
 function Header(props) {
   return (
@@ -9,8 +9,10 @@ function Header(props) {
       {props.darkMode ? (
         <div className="row align-items-center dark" id="header-row">
           <div className="col-9 dark" id="header-col">
-            <FontAwesomeIcon icon={faFilm} id="header-icon" className="dark" />
-            Movie Finder
+            <span onClick={() => props.restartFinderFunction()}>
+              <FontAwesomeIcon icon={faFilm} id="header-icon" className="dark" />
+              Movie Finder
+            </span>
           </div>
           <div className="col-3">
             <div id="dark-mode-title">Dark Mode</div>
@@ -27,8 +29,10 @@ function Header(props) {
       ) : (
         <div className="row align-items-center" id="header-row">
           <div className="col-9" id="header-col">
-            <FontAwesomeIcon icon={faFilm} id="header-icon" />
-            Movie Finder
+            <span onClick={() => props.restartFinderFunction()}>
+              <FontAwesomeIcon icon={faFilm} id="header-icon" />
+              Movie Finder
+            </span>
           </div>
           <div className="col-3">
             <div id="dark-mode-title">Dark Mode</div>
@@ -46,8 +50,8 @@ function Header(props) {
     </>
   );
 }
-const mapStateToProps = (state) => ({ darkMode: state.movies.darkMode });
+const mapStateToProps = (state) => ({ darkMode: state.darkMode });
 
-const mapDispatchToProps = { toggleDarkMode };
+const mapDispatchToProps = { toggleDarkMode, restartFinderFunction };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

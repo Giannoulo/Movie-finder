@@ -1,4 +1,11 @@
-import { ADD_MOVIE_ID, POPULATE_MOVIE_LIST, PLAY_FINDER, CARD_NUMBER, DARK_MODE } from "./types";
+import {
+  ADD_PICKED_MOVIE,
+  POPULATE_MOVIE_LIST,
+  PLAY_FINDER,
+  CARD_NUMBER,
+  DARK_MODE,
+  RESTART_FINDER,
+} from "./types";
 
 /*
  ** movieListActions.js
@@ -12,15 +19,22 @@ export const populateMovieList = (movieList) => {
   };
 };
 
-export const addMovieId = () => {
+export const addPickedMovie = (movie) => {
   return {
-    type: ADD_MOVIE_ID,
+    type: ADD_PICKED_MOVIE,
+    payload: movie,
   };
 };
 
 export const playFinderFunction = () => {
   return {
     type: PLAY_FINDER,
+  };
+};
+
+export const restartFinderFunction = () => {
+  return {
+    type: RESTART_FINDER,
   };
 };
 

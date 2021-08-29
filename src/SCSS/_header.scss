@@ -24,6 +24,9 @@
     background-color: $background-color-header-dark;
     color: $font-color-dark;
   }
+  & > span {
+    cursor: pointer;
+  }
 }
 
 #header-icon {
