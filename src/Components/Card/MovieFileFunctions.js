@@ -1,23 +1,28 @@
 import Papa from "papaparse";
-import movielist from "../../Data/imdb_top_1000.csv";
+import movieCsvFile from "../../Data/imdb_top_1000.csv";
 import MovieTile from "./MovieTile";
 
 export const read_csv = (props) => {
   // Load the 1000 movie list from the csv file to the redux state
-  Papa.parse(movielist, {
-    download: true,
-    complete: function (results) {
-      results.data.shift();
-      props.populateMovieList(results.data);
-    },
-  });
+  try {
+    Papa.parse(movieCsvFile, {
+      download: true,
+      complete: function (results) {
+        results.data.shift(); // Remove csv header row
+        props.populateMovieList(results.data);
+      },
+    });
+  } catch (error) {
+    throw new Error("Parse movie csv file error");
+  }
 };
 
 const getNewMovies = (movieList) => {
   // Return an array of 3 random movies from the 1000 list
-  let movieIds = [];
-  let newMovieList = [];
+  const movieIds = [];
+  const newMovieList = [];
   let foundMovie = null;
+
   // Get 3 random int numbers between 0-1000
   while (movieIds.length <= 2) {
     let movieId = Math.floor(Math.random() * 1000);
@@ -25,6 +30,7 @@ const getNewMovies = (movieList) => {
       movieIds.push(movieId);
     }
   }
+
   // Get the movies that correspond to the 3 random numbers
   for (let movieId of movieIds) {
     foundMovie = movieList.find((movie) => movie[5] === movieId.toString());
@@ -33,18 +39,23 @@ const getNewMovies = (movieList) => {
   return newMovieList;
 };
 
-// Return movie tiles jsx
+// Return movie tiles JSX
 export const getMovieTiles = (movieList) => {
   let newMovieList = getNewMovies(movieList);
-  return (
-    <>
-      {newMovieList.map((newMovie) => (
-        <div className="col movie-tile-col" key={newMovie[5]}>
-          <MovieTile movie={newMovie} recommendation={false} />
-        </div>
-      ))}
-    </>
-  );
+  try {
+    return (
+      <>
+        {newMovieList.map((newMovie) => (
+          <div className="col movie-tile-col" key={newMovie[5]}>
+            <MovieTile movie={newMovie} recommendation={false} />
+          </div>
+        ))}
+      </>
+    );
+  } catch (error) {
+    console.log("movie tile error ", movieList);
+    throw new Error("Get Movie tile JSX Error");
+  }
 };
 
 const findRecommendedMovies = (pickedMovieList, movieList) => {

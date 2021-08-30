@@ -23,6 +23,24 @@
 #card-title {
   max-width: 80%;
   margin: auto;
+  font-size: 30px;
+  &.recommendation {
+    animation-name: recommendation-pulse;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier();
+  }
+}
+
+@keyframes recommendation-pulse {
+  0% {
+    font-size: 30px;
+  }
+  50% {
+    font-size: 32px;
+  }
+  100% {
+    font-size: 30px;
+  }
 }
 
 #card-title-landing {

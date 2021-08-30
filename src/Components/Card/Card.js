@@ -45,7 +45,9 @@ const Card = (props) => {
           {props.playFinder ? (
             <div className="col dark-card" id="card-col">
               {props.cardNumber === 10 ? (
-                <h2 id="card-title">You should check out these movies!</h2>
+                <h2 id="card-title" className="recommendation">
+                  You should check out these movies!
+                </h2>
               ) : (
                 <h2 id="card-title">Choose your favorite movies!</h2>
               )}
@@ -103,7 +105,9 @@ const Card = (props) => {
           {props.playFinder ? (
             <div className="col" id="card-col">
               {props.cardNumber === 10 ? (
-                <h2 id="card-title">You should check out these movies!</h2>
+                <h2 id="card-title" className="recommendation">
+                  You should check out these movies!
+                </h2>
               ) : (
                 <h2 id="card-title">Choose your favorite movies!</h2>
               )}
