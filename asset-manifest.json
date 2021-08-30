@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/Movie-finder/static/css/main.5c6344c3.chunk.css",
-    "main.js": "/Movie-finder/static/js/main.875bc649.chunk.js",
-    "main.js.map": "/Movie-finder/static/js/main.875bc649.chunk.js.map",
-    "runtime-main.js": "/Movie-finder/static/js/runtime-main.6c5e365e.js",
-    "runtime-main.js.map": "/Movie-finder/static/js/runtime-main.6c5e365e.js.map",
+    "main.js": "/Movie-finder/static/js/main.4dd9a3b5.chunk.js",
+    "main.js.map": "/Movie-finder/static/js/main.4dd9a3b5.chunk.js.map",
+    "runtime-main.js": "/Movie-finder/static/js/runtime-main.0a943ad3.js",
+    "runtime-main.js.map": "/Movie-finder/static/js/runtime-main.0a943ad3.js.map",
     "static/css/2.818011ed.chunk.css": "/Movie-finder/static/css/2.818011ed.chunk.css",
-    "static/js/2.e52b7b34.chunk.js": "/Movie-finder/static/js/2.e52b7b34.chunk.js",
-    "static/js/2.e52b7b34.chunk.js.map": "/Movie-finder/static/js/2.e52b7b34.chunk.js.map",
-    "static/js/3.a5d9331e.chunk.js": "/Movie-finder/static/js/3.a5d9331e.chunk.js",
-    "static/js/3.a5d9331e.chunk.js.map": "/Movie-finder/static/js/3.a5d9331e.chunk.js.map",
+    "static/js/2.09c38989.chunk.js": "/Movie-finder/static/js/2.09c38989.chunk.js",
+    "static/js/2.09c38989.chunk.js.map": "/Movie-finder/static/js/2.09c38989.chunk.js.map",
+    "static/js/3.24eb548c.chunk.js": "/Movie-finder/static/js/3.24eb548c.chunk.js",
+    "static/js/3.24eb548c.chunk.js.map": "/Movie-finder/static/js/3.24eb548c.chunk.js.map",
     "index.html": "/Movie-finder/index.html",
     "static/css/2.818011ed.chunk.css.map": "/Movie-finder/static/css/2.818011ed.chunk.css.map",
     "static/css/main.5c6344c3.chunk.css.map": "/Movie-finder/static/css/main.5c6344c3.chunk.css.map",
-    "static/js/2.e52b7b34.chunk.js.LICENSE.txt": "/Movie-finder/static/js/2.e52b7b34.chunk.js.LICENSE.txt",
+    "static/js/2.09c38989.chunk.js.LICENSE.txt": "/Movie-finder/static/js/2.09c38989.chunk.js.LICENSE.txt",
     "static/media/main.css": "/Movie-finder/static/media/HeaderLight.9a14d37d.svg",
     "static/media/imdb_top_1000.e12a5ba6.csv": "/Movie-finder/static/media/imdb_top_1000.e12a5ba6.csv"
   },
   "entrypoints": [
-    "static/js/runtime-main.6c5e365e.js",
+    "static/js/runtime-main.0a943ad3.js",
     "static/css/2.818011ed.chunk.css",
-    "static/js/2.e52b7b34.chunk.js",
+    "static/js/2.09c38989.chunk.js",
     "static/css/main.5c6344c3.chunk.css",
-    "static/js/main.875bc649.chunk.js"
+    "static/js/main.4dd9a3b5.chunk.js"
   ]
 }
