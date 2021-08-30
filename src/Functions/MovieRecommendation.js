@@ -39,15 +39,19 @@ const findRecommendedMovies = (pickedMovieList, movieList) => {
 
   while (newMovieList.length < 10) {
     randomMovieId = Math.floor(Math.random() * 1000) + 1;
-    if (
-      !pickedMovieListIds.includes(movieList[randomMovieId][5]) &&
-      movieList[randomMovieId][3]
-        .split(",")
-        .map((genre) => genre.trim())
-        .includes(topGenre) &&
-      parseInt(movieList[randomMovieId][2]) > earliestReleasedYear
-    ) {
-      newMovieList.push(movieList[randomMovieId]);
+    try {
+      if (
+        !pickedMovieListIds.includes(movieList[randomMovieId][5]) &&
+        movieList[randomMovieId][3]
+          .split(",")
+          .map((genre) => genre.trim())
+          .includes(topGenre) &&
+        parseInt(movieList[randomMovieId][2]) > earliestReleasedYear
+      ) {
+        newMovieList.push(movieList[randomMovieId]);
+      }
+    } catch (error) {
+      throw new Error("Cant Find recommended movies");
     }
   }
   return newMovieList;
