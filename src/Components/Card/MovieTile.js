@@ -10,7 +10,7 @@ const MovieTile = (props) => {
   return (
     <>
       {props.darkMode ? (
-        <div className="movie-tile ">
+        <div className="movie-tile">
           <FontAwesomeIcon
             icon={faInfoCircle}
             className="movietile-info"
@@ -30,7 +30,11 @@ const MovieTile = (props) => {
             }
             src={props.movie[0]}
             alt={props.movie[1]}
-            className="movie-tile-img dark-tile-img"
+            className={
+              props.recommendation
+                ? "movie-tile-img dark-tile-img recommendation"
+                : "movie-tile-img dark-tile-img"
+            }
           />
           <div className="movie-tile-title">{props.movie[1]}</div>
         </div>
@@ -55,7 +59,7 @@ const MovieTile = (props) => {
             }
             src={props.movie[0]}
             alt={props.movie[1]}
-            className="movie-tile-img"
+            className={props.recommendation ? "movie-tile-img recommendation" : "movie-tile-img"}
           />
           <div className="movie-tile-title">{props.movie[1]}</div>
         </div>

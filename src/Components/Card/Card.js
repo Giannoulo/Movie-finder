@@ -5,8 +5,8 @@ import {
   playFinderFunction,
   restartFinderFunction,
 } from "../../Redux/Actions/movieListActions";
-import { recommendMovies } from "../../Functions/RecommendedMoviesFunctions";
-import { read_csv, getMovieTiles } from "../../Functions/MovieSelectionFunctions";
+import { recommendMovies } from "../../Functions/MovieRecommendation";
+import { read_csv, getMovieTiles } from "../../Functions/MovieSelection";
 
 const Card = (props) => {
   // Load the movie list on Redux on first render
@@ -28,15 +28,27 @@ const Card = (props) => {
   // Show Recommended movies after 10 picks
   const showRecommendationMovies = () => {
     setmovieTiles(recommendMovies(props.pickedMovieList, props.movieList));
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   // Re Render MovieTiles
   useEffect(() => {
+    const renderMovieTiles = () => {
+      if (!props.playFinder) {
+        props.playFinderFunction();
+      }
+      setmovieTiles(getMovieTiles(props.movieList));
+    };
+
     if (props.cardNumber > 0 && props.cardNumber < 10) {
       renderMovieTiles();
     } else if (props.cardNumber === 10) {
       showRecommendationMovies();
     }
+    /* eslint-disable */
   }, [props.cardNumber]); // TODO fix eslint warning
 
   return (

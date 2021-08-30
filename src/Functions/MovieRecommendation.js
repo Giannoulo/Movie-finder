@@ -35,20 +35,21 @@ const findRecommendedMovies = (pickedMovieList, movieList) => {
   const pickedMovieListIds = pickedMovieList.map((movie) => movie[5]);
   const { earliestReleasedYear, genreMap } = getOldestYearAndGenres(pickedMovieList);
   const topGenre = getTopGenre(genreMap);
+  let randomMovieId;
 
-  movieList.forEach((movie) => {
+  while (newMovieList.length < 10) {
+    randomMovieId = Math.floor(Math.random() * 1000) + 1;
     if (
-      !pickedMovieListIds.includes(movie[5]) &&
-      movie[3]
+      !pickedMovieListIds.includes(movieList[randomMovieId][5]) &&
+      movieList[randomMovieId][3]
         .split(",")
         .map((genre) => genre.trim())
         .includes(topGenre) &&
-      parseInt(movie[2]) > earliestReleasedYear &&
-      newMovieList.length < 10
+      parseInt(movieList[randomMovieId][2]) > earliestReleasedYear
     ) {
-      newMovieList.push(movie);
+      newMovieList.push(movieList[randomMovieId]);
     }
-  });
+  }
   return newMovieList;
 };
 
