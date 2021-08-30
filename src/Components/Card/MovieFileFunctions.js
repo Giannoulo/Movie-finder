@@ -24,7 +24,7 @@ const getNewMovies = (movieList) => {
   let foundMovie = null;
 
   // Get 3 random int numbers between 0-1000
-  while (movieIds.length < 3) {
+  while (movieIds.length < 5) {
     let movieId = Math.floor(Math.random() * 1000) + 1;
     if (!movieIds.includes(movieId)) {
       movieIds.push(movieId);
