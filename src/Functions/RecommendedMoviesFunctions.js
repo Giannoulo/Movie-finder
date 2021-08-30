@@ -10,7 +10,7 @@ const getOldestYearAndGenres = (pickedMovieList) => {
       earliestReleasedYear = parseInt(movie[2]);
     }
     // Count genre occurences
-    let genres = movie[3].split(",").map((genre) => genre.trim());
+    const genres = movie[3].split(",").map((genre) => genre.trim());
     genres.forEach((genre) => {
       if (!genreMap.has(genre)) {
         genreMap.set(genre, 0);
@@ -54,7 +54,7 @@ const findRecommendedMovies = (pickedMovieList, movieList) => {
 
 // Return recommended movie tiles jsx
 export const recommendMovies = (pickedMovieList, movieList) => {
-  let recommendedMovieList = findRecommendedMovies(pickedMovieList, movieList);
+  const recommendedMovieList = findRecommendedMovies(pickedMovieList, movieList);
   return (
     <>
       {recommendedMovieList.map((recommendedMovie) => (
