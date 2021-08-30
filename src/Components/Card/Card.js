@@ -5,7 +5,8 @@ import {
   playFinderFunction,
   restartFinderFunction,
 } from "../../Redux/Actions/movieListActions";
-import { read_csv, getMovieTiles, recommendMovies } from "./MovieFileFunctions";
+import { recommendMovies } from "../../Functions/RecommendedMoviesFunctions";
+import { read_csv, getMovieTiles } from "../../Functions/MovieSelectionFunctions";
 
 const Card = (props) => {
   // Load the movie list on Redux on first render
