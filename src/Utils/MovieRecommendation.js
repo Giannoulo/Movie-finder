@@ -1,6 +1,6 @@
 import MovieTile from "../Components/Card/MovieTile";
 
-const getOldestYearAndGenres = (pickedMovieList) => {
+export const getOldestYearAndGenres = (pickedMovieList) => {
   let earliestReleasedYear = 3000;
   const genreMap = new Map();
 
@@ -9,7 +9,7 @@ const getOldestYearAndGenres = (pickedMovieList) => {
     if (parseInt(movie[2]) < earliestReleasedYear) {
       earliestReleasedYear = parseInt(movie[2]);
     }
-    // Count genre occurences
+    // Count genre occurrences
     const genres = movie[3].split(",").map((genre) => genre.trim());
     genres.forEach((genre) => {
       if (!genreMap.has(genre)) {
@@ -21,24 +21,25 @@ const getOldestYearAndGenres = (pickedMovieList) => {
   return { earliestReleasedYear, genreMap };
 };
 
-const getTopGenre = (genreMap) => {
+export const getTopGenre = (genreMap) => {
   const genreMapSorted = new Map([...genreMap.entries()].sort((a, b) => b[1] - a[1]));
   return genreMapSorted.keys().next().value;
 };
 
-const findRecommendedMovies = (pickedMovieList, movieList) => {
+export const findRecommendedMovies = (pickedMovieList, movieList, movieNumber = 10) => {
   /*
     Filter the initial movie list and show movies that are newer than 
     the oldest picked movie and contain the users most popular genre
     */
   const newMovieList = [];
-  const pickedMovieListIds = pickedMovieList.map((movie) => movie[5]);
+  let pickedMovieListIds = pickedMovieList.map((movie) => movie[5]);
   const { earliestReleasedYear, genreMap } = getOldestYearAndGenres(pickedMovieList);
   const topGenre = getTopGenre(genreMap);
   let randomMovieId;
 
-  while (newMovieList.length < 10) {
-    randomMovieId = Math.floor(Math.random() * 1000) + 1;
+  // TODO Infinite loop if there are less movies(< movieNumber) that are more recent than the earliestyear
+  while (newMovieList.length < movieNumber) {
+    randomMovieId = Math.floor(Math.random() * movieList.length);
     try {
       if (
         !pickedMovieListIds.includes(movieList[randomMovieId][5]) &&
@@ -49,6 +50,7 @@ const findRecommendedMovies = (pickedMovieList, movieList) => {
         parseInt(movieList[randomMovieId][2]) > earliestReleasedYear
       ) {
         newMovieList.push(movieList[randomMovieId]);
+        pickedMovieListIds.push(movieList[randomMovieId][5]);
       }
     } catch (error) {
       throw new Error("Cant Find recommended movies");

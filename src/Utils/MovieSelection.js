@@ -18,7 +18,7 @@ export const read_csv = (props) => {
   }
 };
 
-const getRandomNumbers = () => {
+export const getRandomNumbers = () => {
   // Get 3 random int numbers between 0-1000
 
   const movieIds = [];
@@ -32,7 +32,7 @@ const getRandomNumbers = () => {
   return movieIds;
 };
 
-const getNewMovies = (movieList) => {
+export const getNewMovies = (movieList) => {
   // Return an array of 3 random movies from the 1000 list
 
   const movieIds = getRandomNumbers();
@@ -49,7 +49,7 @@ const getNewMovies = (movieList) => {
 export const getMovieTiles = (movieList) => {
   // Return movie tiles JSX
 
-  let newMovieList = getNewMovies(movieList);
+  const newMovieList = getNewMovies(movieList);
   try {
     return (
       <>
