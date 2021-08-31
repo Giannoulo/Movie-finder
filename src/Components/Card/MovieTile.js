@@ -16,12 +16,19 @@ const MovieTile = (props) => {
         onMouseLeave={() => setshowDescription("movie-tile-description-hidden")}
         onTouchStart={() => setshowDescription("movie-tile-description-shown")}
       />
-      <p className={showDescription}>{props.movie[4]}</p>
+      <p
+        className={showDescription}
+        onMouseEnter={() => setshowDescription("movie-tile-description-shown")}
+        onMouseLeave={() => setshowDescription("movie-tile-description-hidden")}
+        onTouchStart={() => setshowDescription("movie-tile-description-shown")}
+      >
+        {props.movie[4]}
+      </p>
       <img
         onClick={
           props.recommendation
             ? undefined
-            : () => {
+            : (e) => {
                 props.increaseCardNumber();
                 props.addPickedMovie(props.movie);
               }

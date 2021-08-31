@@ -417,16 +417,42 @@ input:checked + .slider:before {
 
 .movie-tile-description-hidden {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   visibility: hidden;
 }
 
 .movie-tile-description-shown {
   visibility: visible;
   position: absolute;
-  background-color: #00a897bd;
+  background-color: #028090;
   border-radius: 5px;
   color: white;
+  font-weight: 600;
+  font-style: italic;
+  z-index: 2;
+  padding: 10px;
+  max-height: 268px;
+  overflow-y: auto;
+  /* Works on Chrome, Edge, and Safari */
+}
+
+.movie-tile-description-shown.movie-tile-description-shown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.movie-tile-description-shown.movie-tile-description-shown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.movie-tile-description-shown.movie-tile-description-shown::-webkit-scrollbar-thumb {
+  background-color: #00a896;
+  border-radius: 15px;
+}
+
+/* Works on Firefox */
+.movie-tile-description-shown {
+  scrollbar-width: thin;
+  scrollbar-color: #00a896;
 }
 
 .movie-tile-title {
