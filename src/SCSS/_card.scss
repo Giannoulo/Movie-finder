@@ -13,7 +13,25 @@
   &.complete {
     width: 120px;
   }
+  &.restart {
+    float: right;
+  }
+  &.none {
+    float: left;
+  }
 }
+@media (max-width: 304px) {
+  #play-button {
+    &.restart {
+      float: none;
+    }
+    &.none {
+      float: none;
+      margin-top: 13px;
+    }
+  }
+}
+
 #card-row {
   &.dark-body {
     background-color: $background-color-body-dark;

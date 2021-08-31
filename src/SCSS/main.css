@@ -178,6 +178,24 @@
   width: 120px;
 }
 
+#play-button.restart {
+  float: right;
+}
+
+#play-button.none {
+  float: left;
+}
+
+@media (max-width: 304px) {
+  #play-button.restart {
+    float: none;
+  }
+  #play-button.none {
+    float: none;
+    margin-top: 13px;
+  }
+}
+
 #card-row.dark-body {
   background-color: #028090;
 }
