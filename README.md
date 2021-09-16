@@ -11,6 +11,7 @@ The first time the app renders, the csv gets parsed and loaded into redux state 
 
 ![image](https://user-images.githubusercontent.com/37384081/133584344-c6c65d6d-1018-4d37-a4a2-bea7c5246dc4.png)
 ![image](https://user-images.githubusercontent.com/37384081/133584468-04ac555c-03c3-4832-b0b5-9f8ef362aec4.png)
+![image](https://user-images.githubusercontent.com/37384081/133585159-da581538-d3b5-4f03-ad59-3188171627e6.png)
 
 **Click the link for a live demo!**
 https://giannoulo.github.io/Movie-finder/
